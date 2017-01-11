@@ -1,0 +1,33 @@
+<html>
+<head>
+</head>
+<body style="margin: 0px 0px 0px 0px;">
+
+<div id="windowlicker" style="position: absolute; left: 0pt; top: 0px; width: 100%;">
+<img src="Windowlicker.jpg">
+</div>
+
+<script language="JavaScript">
+<!--
+var speed;
+var w = document.getElementById('windowlicker');
+function sc(){
+	w.style.left = parseInt(w.style.left) - speed;
+	if(parseInt(w.style.left) < -3600){ speed = 5; }
+	if(parseInt(w.style.left) < -3700){ speed = 3; }
+	if(parseInt(w.style.left) < -3800){ speed = 1; }
+	if(parseInt(w.style.left) < -3900){ speed = 19; w.style.left = 0; }
+	setTimeout('sc()', 50);
+}
+function init(){
+	w = document.all ? document.all.windowlicker : document.getElementById("windowlicker");
+	speed = 19;
+	w.style.left = 0;
+	setTimeout('sc()', 50);
+}
+//-->
+
+init();
+</script>
+</body>
+</html>
